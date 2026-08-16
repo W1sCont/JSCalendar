@@ -17,6 +17,10 @@ function getDate() {
     let days = new Date(year, month, 0).getDate();
     let dayOfWeek = new Date(year, month - 1, 1).getDay();
 
+    // console.log(day, month, year);
+    // console.log(days);
+    // console.log(dayOfWeek);
+
     p.textContent = `${months[month - 1]} ${year}`;
 
     backgroundImg(month);
@@ -31,7 +35,8 @@ function showDays(day, month, year) {
 
     let daysInCurrentMonth = new Date(year, month, 0).getDate();
     let daysInPreviousMonth = new Date(year, month - 1, 0).getDate();
-    let dayOfWeek = new Date(year, month - 1, 1).getDay();
+    let dayOfWeek = new Date(year, month - 1, 0).getDay();
+    console.log(dayOfWeek);
 
     let numberOfDays = [];
     for (let i = 0; i < daysInCurrentMonth + dayOfWeek; i++) {
@@ -41,7 +46,7 @@ function showDays(day, month, year) {
         }
         numberOfDays.push(i);
     }
-    let tr = document.createElement("tr");
+    let tr = null;
     let th = null;
 
     for (let i = 0; i < numberOfDays.length; i++) {
