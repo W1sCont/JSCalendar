@@ -1,0 +1,40 @@
+table {
+    display: block;
+    border-radius: 1%;
+    border: 1px solid black;
+    background-image: url("/seasons/1.jpg");
+}
+th {
+    width: 70px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 1%;
+    border: 1px solid black;
+    color: whitesmoke;
+}
+input[type="date"] {
+    width: 200px;
+    height: 30px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 40px;
+    font-weight: bold;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.style-regular-day {
+    background-color: rgb(234, 184, 21);
+    color: red;
+}
+.style-weekend-day {
+    background-color: rgb(216, 43, 24);
+    color: black;
+}
